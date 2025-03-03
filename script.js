@@ -210,14 +210,14 @@ function initTerminal() {
     addLine('Welcome to my terminal portfolio! Type "help" to see available commands.', 'success');
     addLine('');
     
-    // Focus on input
+    
     commandInput.focus();
     
-    // Start ambient sound
+    
     startAmbientSound();
   }
 
-  // Add a line to the terminal
+  
   function addLine(text, className = '', isCommand = false) {
     const line = document.createElement('div');
     line.className = `line ${className}`;
@@ -230,6 +230,6 @@ function initTerminal() {
     
     terminalBody.appendChild(line);
     
-    // Scroll to bottom
+    
     terminalBody.scrollTop = terminalBody.scrollHeight;
   }
