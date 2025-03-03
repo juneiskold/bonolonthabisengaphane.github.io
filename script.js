@@ -14,5 +14,11 @@ const portfolioData = {
     Feel free to explore my portfolio using the terminal commands!
     `,
 
-    
+    skills: [
+        { name: "JavaScript", level:70},
+        { name: "Python", level:90},
+        { name: "HTML/CSS", level:90},
+        { name: "Git", level:85},
+        { name: "AWS", level:60}
+    ],
 }
