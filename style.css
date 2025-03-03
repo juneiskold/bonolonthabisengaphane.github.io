@@ -125,3 +125,8 @@ body {
 .command {
     color: var(--text-color);
 }
+
+#input-line {
+    display: flex;
+    margin-top: 0.5rem;
+}
