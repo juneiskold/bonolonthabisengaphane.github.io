@@ -42,5 +42,14 @@ const portfolioData = {
             description: "Interactive terminal-based portfolio website (the one you're using right now!).",
             technologies: ["HTML", "CSS", "JavaScript", "Web Audio API"]
         },
-    ]
+    ],
+
+    interests: [
+        "Film and TV",
+        "Football aka Soccer",
+        "Blogging",
+        "Learning New Technologies",
+        "Reading & Writing",
+        "Psychology(with emphasis on Criminology)"
+    ],
 }
