@@ -16,3 +16,11 @@
     --success-color: #28a745;
     --error-color: #dc3545;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-mono);
+    transition: background-color 0.3s, color 0.3s;
+}
