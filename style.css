@@ -242,3 +242,7 @@ body {
     color: var(--accent-color);
     margin-bottom: 0.5rem;
 }
+
+.project-description {
+    margin-bottom: 0.75rem;
+}
