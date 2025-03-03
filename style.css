@@ -121,3 +121,7 @@ body {
 .error {
     color: var(--error-color);
 }
+
+.command {
+    color: var(--text-color);
+}
