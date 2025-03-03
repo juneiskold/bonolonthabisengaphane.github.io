@@ -72,4 +72,11 @@ const portfolioData = {
             date: "2025-02-15"
         }
     ],
+
+    contact: {
+        email: "bonoloapp28@gmail.com",
+        github: "github.com/juneiskold",
+        linkedin: "linkedin.com/in/bonoloaphane",
+        x_formerly_known_as_twitter: x.com/juneiskold
+    },
 }
