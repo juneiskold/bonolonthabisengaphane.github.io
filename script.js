@@ -130,3 +130,11 @@ function startAmbientSound() {
         oscillator.detune.value = randomDetune;
     }, 100);
 }
+
+function stopAmbientSound() {
+    if (oscillator) {
+        oscillator.stop();
+        oscillator = null;
+        gainNode = null;
+    }
+}
