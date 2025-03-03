@@ -225,3 +225,8 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+
+.control-button:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
