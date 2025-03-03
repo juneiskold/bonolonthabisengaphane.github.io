@@ -282,4 +282,16 @@ body {
     #terminal-container {
         padding: 1rem;
     }
+
+    #terminal {
+        height: calc(100vh - 2rem);
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .controls {
+        flex-direction: column;
+    }
 }
