@@ -105,3 +105,28 @@ const terminalBody = document.getElementById('terminal-body')
 const commandInput = document.getElementById('command-input');
 const themeToggle = document.getElementById('theme-toggle');
 const audioControl = document.getElementById('audio-control');
+
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+let oscillator = null;
+let gainNode = null;
+
+function startAmbientSound() {
+    if (oscillator) return;
+
+    oscillator = audioContext.createOscillator();
+    gainNode = audioContext.createGain();
+
+    oscillator.type = 'sine';
+    oscillator.frequency.value = 220; 
+
+    gainNode.gain.value = 0.05;
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    oscillator.start();
+
+    setInterval(() => {
+        const randomDetune = Math.sin(Date.now()/ 1000) * 5;
+        oscillator.detune.value = randomDetune;
+    }, 100);
+}
