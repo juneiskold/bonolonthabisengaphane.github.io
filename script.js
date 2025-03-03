@@ -41,7 +41,7 @@ const portfolioData = {
         {   title: "Terminal Portfolio",
             description: "Interactive terminal-based portfolio website (the one you're using right now!).",
             technologies: ["HTML", "CSS", "JavaScript", "Web Audio API"]
-        },
+        }
     ],
 
     interests: [
@@ -51,5 +51,25 @@ const portfolioData = {
         "Learning New Technologies",
         "Reading & Writing",
         "Psychology(with emphasis on Criminology)"
+    ],
+
+    blogs: [
+        {
+            title: "The Rise of Jamstack Architecture",
+            summary: "Exploring how Jamstack is changing the way we build and deliver websites.",
+            date: "2025-01-15"
+        },
+
+        {
+            title: "Accessibility First: Designing for Everyone",
+            summary: "Why we should prioritize accessibility from the start of any web project.",
+            date: "2025-01-21"
+        },
+
+        {
+            title: "Embracing TypeScript in 2025",
+            summary: "How TypeScript has evolved and why it's more relevant than ever.",
+            date: "2025-02-15"
+        }
     ],
 }
