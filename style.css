@@ -201,3 +201,8 @@ body {
     border-radius: 5px;
     overflow: hidden;
 }
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--accent-color);
+}
