@@ -130,3 +130,9 @@ body {
     display: flex;
     margin-top: 0.5rem;
 }
+
+#prompt {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
