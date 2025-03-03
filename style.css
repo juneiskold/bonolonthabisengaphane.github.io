@@ -117,3 +117,7 @@ body {
 .success {
     color: var(--success-color);
 }
+
+.error {
+    color: var(--error-color);
+}
