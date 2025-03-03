@@ -158,45 +158,47 @@ audioControl.addEventListener('click', () => {
 function simulateLoading() {
     let progress = 0;
     const loadingMessages = [
-        "Loading core files...",
-        "Initializing terminal...",
-        "Loading portfolio data...",
-        "Setting up environment...",
-        "Establishing connection...",
-        "Applying styles...",
-        "Almost ready..."
+      "Loading core files...",
+      "Initializing terminal...",
+      "Loading portfolio data...",
+      "Setting up environment...",
+      "Establishing connection...",
+      "Applying styles...",
+      "Almost ready..."
     ];
-
+    
     const interval = setInterval(() => {
-        progress += Math.random() * 10;
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
+      progress += Math.random() * 10;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+        
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+          terminalContainer.style.display = 'block';
+          initTerminal();
+        }, 500);
+      }
+      
+      loadingProgress.style.width = `${progress}%`;
+      
+      if (progress > 20 && progress < 40) {
+        loadingStatus.textContent = loadingMessages[1];
+      } else if (progress > 40 && progress < 60) {
+        loadingStatus.textContent = loadingMessages[2];
+      } else if (progress > 60 && progress < 80) {
+        loadingStatus.textContent = loadingMessages[3];
+      } else if (progress > 80 && progress < 90) {
+        loadingStatus.textContent = loadingMessages[4];
+      } else if (progress > 90) {
+        loadingStatus.textContent = loadingMessages[6];
+      }
+    }, 200);
+  }
 
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-                terminalContainer.style.display = 'block';
-                initTerminal();
-            }, 500)
-        }
-
-        loadingProgress.style.width = `${progress}%`;
-
-        if (progress > 20 && progress < 40) {
-            loadingStatus.textContent = loadingMessages[1];
-          } else if (progress > 40 && progress < 60) {
-            loadingStatus.textContent = loadingMessages[2];
-          } else if (progress > 60 && progress < 80) {
-            loadingStatus.textContent = loadingMessages[3];
-          } else if (progress > 80 && progress < 90) {
-            loadingStatus.textContent = loadingMessages[4];
-          } else if (progress > 90) {
-            loadingStatus.textContent = loadingMessages[6];
-          }
-        }, 200);
-}
-
-function initTerminal() {
+  // Initialize Terminal
+  function initTerminal() {
+    // ASCII art banner
     const banner = `
 ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
 ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
@@ -210,14 +212,14 @@ function initTerminal() {
     addLine('Welcome to my terminal portfolio! Type "help" to see available commands.', 'success');
     addLine('');
     
-    
+    // Focus on input
     commandInput.focus();
     
-    
+    // Start ambient sound
     startAmbientSound();
   }
 
-  
+  // Add a line to the terminal
   function addLine(text, className = '', isCommand = false) {
     const line = document.createElement('div');
     line.className = `line ${className}`;
@@ -230,10 +232,11 @@ function initTerminal() {
     
     terminalBody.appendChild(line);
     
-    
+    // Scroll to bottom
     terminalBody.scrollTop = terminalBody.scrollHeight;
   }
 
+  // Process command
   function processCommand(command) {
     addLine(command, '', true);
     
