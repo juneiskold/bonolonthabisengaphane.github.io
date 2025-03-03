@@ -136,3 +136,14 @@ body {
     font-weight: bold;
     margin-right: 0.5rem;
 }
+
+#command-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    caret-color: var(--accent-color);
+}
