@@ -154,3 +154,44 @@ audioControl.addEventListener('click', () => {
         </svg>`;
     }
 });
+
+function simulateLoading() {
+    let progress = 0;
+    const loadingMessages = [
+        "Loading core files...",
+        "Initializing terminal...",
+        "Loading portfolio data...",
+        "Setting up environment...",
+        "Establishing connection...",
+        "Applying styles...",
+        "Almost ready..."
+    ];
+
+    const interval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                terminalContainer.style.display = 'block';
+                initTerminal();
+            }, 500)
+        }
+
+        loadingProgress.style.width = `${progress}%`;
+
+        if (progress > 20 && progress < 40) {
+            loadingStatus.textContent = loadingMessages[1];
+          } else if (progress > 40 && progress < 60) {
+            loadingStatus.textContent = loadingMessages[2];
+          } else if (progress > 60 && progress < 80) {
+            loadingStatus.textContent = loadingMessages[3];
+          } else if (progress > 80 && progress < 90) {
+            loadingStatus.textContent = loadingMessages[4];
+          } else if (progress > 90) {
+            loadingStatus.textContent = loadingMessages[6];
+          }
+        }, 200);
+}
