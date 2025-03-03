@@ -147,3 +147,11 @@ body {
     font-family: var(--font-mono);
     caret-color: var(--accent-color);
 }
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: var(--accent-color);
+    animation: blink 1s step-end infinite;
+}
