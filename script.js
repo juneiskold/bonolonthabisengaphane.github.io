@@ -195,3 +195,22 @@ function simulateLoading() {
           }
         }, 200);
 }
+
+function initTerminal() {
+    const banner = `
+    ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
+    ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+    ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+    ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+    ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
+                                                                            `;
+          
+    addLine(banner, 'success');
+    addLine('Welcome to my terminal portfolio! Type "help" to see available commands.','success');
+    addLine("");
+    
+    commandInput.focus();
+
+    startAmbientSound();
+}
