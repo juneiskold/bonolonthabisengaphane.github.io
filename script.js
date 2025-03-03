@@ -233,3 +233,245 @@ function initTerminal() {
     
     terminalBody.scrollTop = terminalBody.scrollHeight;
   }
+
+  function processCommand(command) {
+    addLine(command, '', true);
+    
+    const cmd = command.toLowerCase().trim();
+    
+    switch (cmd) {
+      case 'about':
+        addLine(portfolioData.about);
+        break;
+      
+      case 'skills':
+        addLine('My Skills:');
+        addLine('');
+        
+        const skillsContainer = document.createElement('div');
+        skillsContainer.className = 'bento-grid';
+        
+        portfolioData.skills.forEach(skill => {
+          const skillItem = document.createElement('div');
+          skillItem.className = 'bento-item';
+          
+          const skillName = document.createElement('div');
+          skillName.className = 'skill-name';
+          skillName.textContent = skill.name;
+          
+          const skillLevel = document.createElement('div');
+          skillLevel.className = 'skill-level';
+          
+          const skillProgress = document.createElement('div');
+          skillProgress.className = 'skill-progress';
+          skillProgress.style.width = `${skill.level}%`;
+          
+          skillLevel.appendChild(skillProgress);
+          skillItem.appendChild(skillName);
+          skillItem.appendChild(skillLevel);
+          skillsContainer.appendChild(skillItem);
+        });
+            
+        const lineDiv = document.createElement('div');
+        lineDiv.className = 'line';
+        lineDiv.appendChild(skillsContainer);
+        terminalBody.appendChild(lineDiv);
+        break;
+      
+      case 'projects':
+        addLine('My Projects:');
+        addLine('');
+        
+        portfolioData.projects.forEach(project => {
+          const projectContainer = document.createElement('div');
+          projectContainer.className = 'project-card';
+          
+          const title = document.createElement('div');
+          title.className = 'project-title';
+          title.textContent = project.title;
+          
+          const description = document.createElement('div');
+          description.className = 'project-description';
+          description.textContent = project.description;
+          
+          const techTitle = document.createElement('div');
+          techTitle.textContent = 'Technologies:';
+          
+          const techContainer = document.createElement('div');
+          techContainer.className = 'project-tech';
+          
+          project.technologies.forEach(tech => {
+            const techTag = document.createElement('span');
+            techTag.className = 'tech-tag';
+            techTag.textContent = tech;
+            techContainer.appendChild(techTag);
+          });
+          
+          projectContainer.appendChild(title);
+          projectContainer.appendChild(description);
+          projectContainer.appendChild(techTitle);
+          projectContainer.appendChild(techContainer);
+          
+          const lineDiv = document.createElement('div');
+          lineDiv.className = 'line';
+          lineDiv.appendChild(projectContainer);
+          terminalBody.appendChild(lineDiv);
+        });
+        break;
+      
+      case 'interests':
+        addLine('My Interests:');
+        addLine('');
+        addLine(portfolioData.interests.join(', '));
+        break;
+      
+      case 'blogs':
+        addLine('My Blog Posts:');
+        addLine('');
+        
+        portfolioData.blogs.forEach(blog => {
+          addLine(`${blog.title} (${blog.date})`);
+          addLine(`Summary: ${blog.summary}`);
+          addLine('');
+        });
+        break;
+      
+      case 'contact':
+        addLine('Contact Information:');
+        addLine('');
+        addLine(`Email: ${portfolioData.contact.email}`);
+        addLine(`GitHub: ${portfolioData.contact.github}`);
+        addLine(`LinkedIn: ${portfolioData.contact.linkedin}`);
+        addLine(`Twitter: ${portfolioData.contact.twitter}`);
+        break;
+      
+      case 'clear':
+        terminalBody.innerHTML = '';
+        break;
+      
+      case 'help':
+        addLine(portfolioData.help);
+        break;
+      
+      case 'theme':
+        toggleTheme();
+        break;
+      
+      case 'music':
+        if (oscillator) {
+          stopAmbientSound();
+          addLine('Music stopped.', 'success');
+        } else {
+          startAmbientSound();
+          addLine('Music started.', 'success');
+        }
+        break;
+        
+      case 'exit':
+      case 'quit':
+        addLine('Thank you for visiting my portfolio!', 'success');
+        addLine('Process terminated. (Just kidding, this is a website!)');
+        break;
+      
+      case '':
+        // Do nothing for empty command
+        break;
+        
+      default:
+        if (cmd.startsWith('cd ')) {
+          addLine('Navigating to directories is not supported. Use specific commands like "about", "projects", etc.');
+        } else if (cmd.startsWith('ls')) {
+          addLine('Available sections:');
+          addLine('');
+          addLine('about/     projects/     skills/');
+          addLine('blogs/     interests/    contact/');
+        } else {
+          addLine(`Command not found: ${command}`, 'error');
+          addLine('Type "help" to see available commands.');
+        }
+    }
+    
+    addLine('');
+  }
+
+  // Handle command input
+  commandInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const command = commandInput.value;
+      processCommand(command);
+      commandInput.value = '';
+    }
+  });
+
+  // Command history functionality
+  let commandHistory = [];
+  let historyIndex = -1;
+
+  commandInput.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowUp') {
+      if (historyIndex < commandHistory.length - 1) {
+        historyIndex++;
+        commandInput.value = commandHistory[commandHistory.length - 1 - historyIndex];
+      }
+      // Move cursor to end of input
+      setTimeout(() => {
+        commandInput.selectionStart = commandInput.selectionEnd = commandInput.value.length;
+      }, 0);
+      e.preventDefault();
+    } else if (e.key === 'ArrowDown') {
+      if (historyIndex > 0) {
+        historyIndex--;
+        commandInput.value = commandHistory[commandHistory.length - 1 - historyIndex];
+      } else if (historyIndex === 0) {
+        historyIndex = -1;
+        commandInput.value = '';
+      }
+      e.preventDefault();
+    } else if (e.key === 'Tab') {
+      e.preventDefault();
+      // Simple command completion
+      const partialCmd = commandInput.value.toLowerCase();
+      const cmds = ['about', 'skills', 'projects', 'interests', 'blogs', 'contact', 'clear', 'help', 'theme', 'music'];
+      
+      const matches = cmds.filter(cmd => cmd.startsWith(partialCmd));
+      if (matches.length === 1) {
+        commandInput.value = matches[0];
+      } else if (matches.length > 1) {
+        addLine('Possible commands:');
+        addLine(matches.join('  '));
+        addLine('');
+        // Restore prompt
+        addLine('', '', true);
+      }
+    }
+  });
+
+  // Toggle theme
+  function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const themeMessage = document.body.classList.contains('light-mode') 
+      ? 'Theme switched to light mode.'
+      : 'Theme switched to dark mode.';
+    addLine(themeMessage, 'success');
+  }
+
+  // Theme toggle button
+  themeToggle.addEventListener('click', toggleTheme);
+
+  // Make sure terminal input is always focused
+  document.getElementById('terminal').addEventListener('click', () => {
+    commandInput.focus();
+  });
+
+  // Auto-focus input when the page loads
+  window.addEventListener('load', () => {
+    commandInput.focus();
+  });
+
+  // Handle loss of focus
+  document.addEventListener('click', () => {
+    commandInput.focus();
+  });
+
+  // Start loading animation
+  window.addEventListener('load', simulateLoading);
