@@ -175,3 +175,7 @@ body {
     text-align: center;
     transition: transform 0.3s, background-color 0.3s;
 }
+
+.light-mode .bento-item {
+    background-color: rgba(0, 0, 0, 0.05);
+}
