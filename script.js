@@ -79,4 +79,29 @@ const portfolioData = {
         linkedin: "linkedin.com/in/bonoloaphane",
         x_formerly_known_as_twitter: x.com/juneiskold
     },
-}
+
+    help: `
+    Available Commands:
+        about       - Display information about me
+        skills      - Show my technical skills
+        projects    - View my recent projects
+        interests   - See what I'm interested in
+        blogs       - Read my latest blog posts
+        contact     - Get my contact information
+        clear       - Clear the terminal
+        help        - Show this help message
+        theme       - Toggle between light/dark mode
+        music       - Toggle background music    
+
+    `
+};
+
+// dom elements
+const loadingScreen = document.getElementById('loading-screen');
+const loadingProgress = document.getElementById('loading-progress');
+const loadingStatus  = document.getElementById('loading-status')
+const terminalContainer = document.getElementById('terminal-container');
+const terminalBody = document.getElementById('terminal-body')
+const commandInput = document.getElementById('command-input');
+const themeToggle = document.getElementById('theme-toggle');
+const audioControl = document.getElementById('audio-control');
