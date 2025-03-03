@@ -198,19 +198,38 @@ function simulateLoading() {
 
 function initTerminal() {
     const banner = `
-    ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
-    ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
-    ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
-    ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
-    ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
-    ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
-                                                                            `;
-          
-    addLine(banner, 'success');
-    addLine('Welcome to my terminal portfolio! Type "help" to see available commands.','success');
-    addLine("");
+██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
+██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝ 
+                                                                      `;
     
+    addLine(banner, 'success');
+    addLine('Welcome to my terminal portfolio! Type "help" to see available commands.', 'success');
+    addLine('');
+    
+    // Focus on input
     commandInput.focus();
-
+    
+    // Start ambient sound
     startAmbientSound();
-}
+  }
+
+  // Add a line to the terminal
+  function addLine(text, className = '', isCommand = false) {
+    const line = document.createElement('div');
+    line.className = `line ${className}`;
+    
+    if (isCommand) {
+      line.innerHTML = `<span class="prompt">user@portfolio:~$</span> <span class="command">${text}</span>`;
+    } else {
+      line.textContent = text;
+    }
+    
+    terminalBody.appendChild(line);
+    
+    // Scroll to bottom
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+  }
