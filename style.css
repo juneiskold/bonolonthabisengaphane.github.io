@@ -213,3 +213,7 @@ a:hover {
     color: #00ff00;
     text-decoration: underline;
 }
+
+.light-mode a:hover {
+    color: #008800;
+}
