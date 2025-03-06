@@ -173,3 +173,8 @@ body.light-mode {
 .contact-container {
     margin-bottom: 20px;
 }
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+}
