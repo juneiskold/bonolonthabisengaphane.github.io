@@ -241,4 +241,14 @@ function updateUnusedCommandsList() {
            `).join('')}
        </div>
    `;
+
+
+   document.querySelectorAll('.unused-command-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const cmd = this.getAttribute('data-command');
+        terminalInput.value = cmd;
+        terminalInput.focus();
+    });
+});
+
 }
