@@ -105,3 +105,7 @@ body.light-mode {
 .command-input {
     margin-bottom: 10px;
 }
+
+.command-output {
+    white-space: pre-wrap;
+}
