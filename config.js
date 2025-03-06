@@ -5,4 +5,14 @@ const portfolioData = {
     Currently based in Johannesburg, South Africa, I'm always open to new
     oppurtunities and collaborations.`,
 
+
+    skills:[
+        { name: "JavaScript", rating:5 },
+        { name: "HTML/CSS", rating:5 },
+        { name: "React", rating:3 },
+        { name: "Typescript", rating:3 },
+        { name: "Git/GitHub", rating:5 }
+    ],
+
+
 }
