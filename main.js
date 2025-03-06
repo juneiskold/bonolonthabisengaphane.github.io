@@ -36,6 +36,9 @@ const commands = {
     },
 
     about: function() {
-        
-    }
+        markCommandAsUsed('about');
+        return portfolioData.about;
+    },
+
+    
 }
