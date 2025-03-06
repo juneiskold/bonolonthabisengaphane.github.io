@@ -208,3 +208,8 @@ a {
     text-decoration: underline;
     position: relative;
 }
+
+a:hover {
+    color: #00ff00;
+    text-decoration: underline;
+}
