@@ -372,4 +372,9 @@ function markCommandAsUsed(cmd) {
     
     setTimeout(scrollToBottom, 100);
  });
+
+ terminal.addEventListener('click', function() {
+    terminalInput.focus();
+ });
+ 
  
