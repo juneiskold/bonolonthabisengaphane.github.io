@@ -87,3 +87,13 @@ body.light-mode {
 .prompt {
     margin-right: 8px;
 }
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
