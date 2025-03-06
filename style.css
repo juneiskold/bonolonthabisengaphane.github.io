@@ -178,3 +178,7 @@ body.light-mode {
     list-style-type: none;
     padding-left: 0;
 }
+
+.contact-list li {
+    margin-bottom: 8px;
+}
