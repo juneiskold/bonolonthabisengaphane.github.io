@@ -350,3 +350,21 @@ function markCommandAsUsed(cmd) {
     }
  });
  
+
+ function toggleTheme() {
+    darkMode = !darkMode;
+   
+    document.body.classList.toggle('light-mode');
+    terminal.classList.toggle('light-mode');
+    unusedCommandsElement.classList.toggle('light-mode');
+   
+    if (darkMode) {
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+    } else {
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+    }
+ }
+ 
+ 
