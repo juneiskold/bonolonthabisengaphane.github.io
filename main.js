@@ -152,7 +152,7 @@ ${portfolioData.interests.map(interest => `• ${interest}`).join('\n')}
 <ul class="certifications-list">`;
 
 
-       portfolioData.experience.certifications.forEach(cert => {
+       portfolioData.experience.certification.forEach(cert => {
            output += `
    <li>
        <a href="${cert.link}" target="_blank" class="certification-link">${cert.name}, ${cert.provider}</a> (${cert.year})
