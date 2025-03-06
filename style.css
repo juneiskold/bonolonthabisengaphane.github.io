@@ -55,3 +55,8 @@ body.light-mode {
 .terminal-title {
     font-weight: bold;
 }
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+}
