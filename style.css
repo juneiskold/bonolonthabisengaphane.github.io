@@ -296,3 +296,8 @@ a:hover {
     font-weight: bold;
     transition: all 0.2 ease;
 }
+
+.reset-commands:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
