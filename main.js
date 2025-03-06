@@ -187,5 +187,11 @@ const commands = {
         toggleTheme();
         return ''; 
     }
- 
 };
+
+
+
+function resetAllCommands() {
+    usedCommands.clear();
+    updateUnusedCommandsList();
+}
