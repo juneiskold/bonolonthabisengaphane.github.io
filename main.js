@@ -230,4 +230,15 @@ function updateUnusedCommandsList() {
        
         return;
     }
- 
+
+    unusedCommandsElement.innerHTML = `
+       <div class="unused-commands-header">Discover More:</div>
+       <div class="unused-commands-list">
+           ${unusedCommandsList.map(cmd => `
+               <div class="unused-command-item" data-command="${cmd}">
+                   ${cmd}
+               </div>
+           `).join('')}
+       </div>
+   `;
+}
