@@ -173,5 +173,12 @@ const commands = {
  
         return output;
     },
+
+
+    clear: function() {
+        markCommandAsUsed('clear');
+        commandHistory.innerHTML = '';
+        return '';
+    },
  
 }
