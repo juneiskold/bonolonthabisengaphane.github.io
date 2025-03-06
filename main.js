@@ -260,4 +260,10 @@ function markCommandAsUsed(cmd) {
         updateUnusedCommandsList();
     }
  }
+
+
+ const loadingInterval = setInterval(() => {
+    loadingText.textContent = glitchFrames[index];
+    index = (index + 1) % glitchFrames.length;
+ }, 300);
  
