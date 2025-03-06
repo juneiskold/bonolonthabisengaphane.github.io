@@ -377,4 +377,9 @@ function markCommandAsUsed(cmd) {
     terminalInput.focus();
  });
  
+ const observer = new MutationObserver(function(mutations) {
+    scrollToBottom();
+ });
+ 
+
  
