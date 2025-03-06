@@ -213,6 +213,21 @@ function createUnusedCommandsElement() {
 function updateUnusedCommandsList() {
     const commandsList = Object.keys(commands);
     const unusedCommandsList = commandsList.filter(cmd => !usedCommands.has(cmd));
-
+   
     
-}
+    if (unusedCommandsList.length === 0) {
+        
+        unusedCommandsElement.innerHTML = `
+            <div class="unused-commands-header">All Commands Used!</div>
+            <div class="reset-commands">Reset Commands</div>
+        `;
+       
+        
+        const resetButton = document.querySelector('.reset-commands');
+        if (resetButton) {
+            resetButton.addEventListener('click', resetAllCommands);
+        }
+       
+        return;
+    }
+ 
