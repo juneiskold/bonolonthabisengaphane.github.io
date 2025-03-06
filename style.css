@@ -156,3 +156,7 @@ body.light-mode {
     border-bottom: 1px dashed #0f0;
     padding-bottom: 5px;
 }
+
+.light-mode .skill-item {
+    border-bottom: 1px dashed #333;
+}
