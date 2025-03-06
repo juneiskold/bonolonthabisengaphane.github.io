@@ -92,5 +92,31 @@ const commands = {
         output += `</div>`;
         return output;
     },
+
+
+    blog: function() {
+        markCommandAsUsed('blog');
+        let output = `<div class="blog-container">
+ <h2>My Latest Blog Posts:</h2>
+ <ul class="blog-list">`;
+ 
+ 
+        portfolioData.blog.forEach(post => {
+            output += `
+ <li class="blog-item">
+    <div class="blog-header">
+        <a href="${post.link}" target="_blank" class="blog-link">${post.title}</a>
+        <span class="blog-date">${post.date}</span>
+    </div>
+    <div class="blog-snippet">${post.snippet}</div>
+ </li>
+ `;
+        });
+ 
+ 
+        output += `</ul></div>`;
+        return output;
+    },
+   
  
 }
