@@ -242,3 +242,8 @@ a:hover {
     bottom: 20px;
     right: 20px;
 }
+
+.light-mode .unused-commands {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
