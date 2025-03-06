@@ -58,6 +58,14 @@ const portfolioData = {
             date: "2024-12-10",
             snippet: "Comparing two powerful CSS layout systems and when to use each one.",
             link: "https://yourblog.com/css-grid-vs-flexbox"
-        },
-    ]
+        }
+    ],
+
+
+    contact: {
+        email: "bonoloapp28@gmail.com",
+        github: "https://github.com/juneiskold",
+        linkedin: "https://linkedin.com/bonoloaphane",
+        twitter: "https://twitter.com/juneiskold"
+    },
 }
