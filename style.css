@@ -133,3 +133,7 @@ body.light-mode {
 .project-tech {
     margin-top: 5px;
 }
+
+.project-tech span {
+    margin-right: 10px;
+}
