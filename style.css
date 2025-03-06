@@ -51,3 +51,7 @@ body.light-mode {
 .light-mode .terminal-header {
     border-bottom: 1px solid #333;
 }
+
+.terminal-title {
+    font-weight: bold;
+}
