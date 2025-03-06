@@ -367,4 +367,9 @@ function markCommandAsUsed(cmd) {
     }
  }
  
+ themeToggle.addEventListener('click', function() {
+    toggleTheme();
+    
+    setTimeout(scrollToBottom, 100);
+ });
  
