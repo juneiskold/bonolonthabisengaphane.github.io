@@ -97,3 +97,5 @@ const portfolioData = {
         ]
     }
 };
+
+const glitchFrames = ["L0ADING", "LØADING", "L04DING", "L0AD1NG", "L0ADING_"]
