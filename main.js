@@ -385,4 +385,11 @@ function markCommandAsUsed(cmd) {
     observer.observe(terminalContent, { childList: true, subtree: true });
  }
  
+
+ document.querySelectorAll('.skills-container, .projects-container, .contact-container, .experience-container, .blog-container').forEach(container => {
+    if (container) {
+        container.addEventListener('DOMNodeInserted', scrollToBottom);
+    }
+ });
+ 
  
