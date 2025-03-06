@@ -71,3 +71,7 @@ body.light-mode {
     margin-bottom: 15px;
     scroll-behavior: smooth;
 }
+
+.welcome-message {
+    margin-bottom: 15px;
+}
