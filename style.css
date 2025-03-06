@@ -201,3 +201,10 @@ body.light-mode {
 .education-list li, .certifications-list li {
     margin-bottom: 8px;
 }
+
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    position: relative;
+}
