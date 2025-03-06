@@ -333,3 +333,20 @@ function markCommandAsUsed(cmd) {
     scrollToBottom();
  }
  
+ terminalInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        const input = terminalInput.value;
+        const output = processCommand(input);
+       
+        
+        if (output !== '') {
+            addToHistory(input, output);
+        } else {
+            
+            setTimeout(scrollToBottom, 100);
+        }
+       
+        terminalInput.value = '';
+    }
+ });
+ 
