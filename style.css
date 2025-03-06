@@ -97,3 +97,7 @@ body.light-mode {
     font-size: inherit;
     outline: none;
 }
+
+.command-block {
+    margin-bottom: 10px;
+}
