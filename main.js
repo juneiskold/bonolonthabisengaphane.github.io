@@ -1,0 +1,1 @@
+import { portfolioData, glitchFrames, defaultDarkMode } from "./config";
