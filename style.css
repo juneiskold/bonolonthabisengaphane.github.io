@@ -79,3 +79,7 @@ body.light-mode {
 .command-history {
     margin-bottom: 15px;
 }
+
+.terminal-input-line {
+    display: flex;
+}
