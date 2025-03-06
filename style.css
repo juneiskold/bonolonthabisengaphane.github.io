@@ -109,3 +109,12 @@ body.light-mode {
 .command-output {
     white-space: pre-wrap;
 }
+
+
+.project-card {
+    border: 1px solid #0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease;
+}
