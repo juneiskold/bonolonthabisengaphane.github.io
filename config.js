@@ -1,7 +1,7 @@
 const portfolioData = {
     about: `* Hello! I'm a software developer and engineer passionate about creating interactive software.
 * I specialize in backend development with focus on cloud and software integration.
-* Currently based in Johannesburg, South Africa, I'm always open to new oppurtunities and collaborations.`,
+* Currently based in Johannesburg, South Africa, I'm always open to new opportunities and collaborations.`,
 
 
     skills:[
@@ -30,7 +30,7 @@ const portfolioData = {
 
         {
             name: "E-commerce App",
-            technologies: ["TypeScripte", "Next.js", "Stripe API"],
+            technologies: ["TypeScript", "Next.js", "Stripe API"],
             link: "https://github.com/yourusername/ecommerce"
         },
 
@@ -63,14 +63,14 @@ const portfolioData = {
     contact: {
         email: "bonoloapp28@gmail.com",
         github: "https://github.com/juneiskold",
-        linkedin: "https://www.linkedin.com/in/bonolo-aphane-22a5b229a"
-        // twitter: "https://twitter.com/juneiskold"
+        linkedin: "https://www.linkedin.com/in/bonolo-aphane-22a5b229a",
+        twitter: "https://twitter.com/juneiskold"
     },
 
     experience:{
         education: [
             {
-                degree: "National NQF Level 5 Certifcate in Systems Development",
+                degree: "National NQF Level 5 Certificate in Systems Development",
                 institution: "WeThinkCode_",
                 year: "2023-2025",
                 link: "https://wethinkcode.co.za/"
