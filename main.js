@@ -12,3 +12,6 @@ const terminalContent = document.querySelector(".terminal-content");
 
 let index = 0;
 let darkMode = defaultDarkMode;
+
+const usedCommands = new Set();
+let unusedCommandsElement;
