@@ -289,3 +289,17 @@ function markCommandAsUsed(cmd) {
  }
  
  
+ function processCommand(cmd) {
+    cmd = cmd.trim().toLowerCase();
+   
+    if (cmd === '') {
+        return '';
+    }
+   
+    if (commands[cmd]) {
+        return commands[cmd]();
+    } else {
+        return `Command not found: ${cmd}. Type 'help' to see available commands.`;
+    }
+ }
+ 
