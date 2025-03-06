@@ -15,3 +15,27 @@ let darkMode = defaultDarkMode;
 
 const usedCommands = new Set();
 let unusedCommandsElement;
+
+const commands = {
+    help:function() {
+        markCommandAsUsed('help');
+        return `
+
+    Available Commands:
+        -about:         Display information about me
+        -skills:        List my technical skills
+        -interests:     Show my interests
+        -projects:      View my projects
+        -blog:          Read my latest blog posts
+        -contact:       Get my contact information
+        -experience:    View my education and certifications
+        -clear:         Clear the terminal
+        -theme:         Toggle light/dark mode
+        -help:          Show this help message
+        `;
+    },
+
+    about: function() {
+        
+    }
+}
