@@ -160,3 +160,7 @@ body.light-mode {
 .light-mode .skill-item {
     border-bottom: 1px dashed #333;
 }
+
+.skill-name {
+    font-weight: bold;
+}
