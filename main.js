@@ -133,5 +133,45 @@ const commands = {
  </div>
  `;
     },
+
+
+    experience: function() {
+        markCommandAsUsed('experience');
+        let output = `<div class="experience-container">
+ <h2>Education:</h2>
+ <ul class="education-list">`;
+ 
+ 
+        portfolioData.experience.education.forEach(edu => {
+            output += `
+    <li>
+        <a href="${edu.link}" target="_blank" class="education-link">${edu.degree}, ${edu.institution}</a> (${edu.year})
+    </li>`;
+        });
+ 
+ 
+        output += `
+ </ul>
+ 
+ 
+ <h2>Certifications:</h2>
+ <ul class="certifications-list">`;
+ 
+ 
+        portfolioData.experience.certifications.forEach(cert => {
+            output += `
+    <li>
+        <a href="${cert.link}" target="_blank" class="certification-link">${cert.name}, ${cert.provider}</a> (${cert.year})
+    </li>`;
+        });
+ 
+ 
+        output += `
+ </ul>
+ </div>`;
+ 
+ 
+        return output;
+    },
  
 }
