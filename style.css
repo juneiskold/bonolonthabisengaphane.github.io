@@ -83,3 +83,7 @@ body.light-mode {
 .terminal-input-line {
     display: flex;
 }
+
+.prompt {
+    margin-right: 8px;
+}
