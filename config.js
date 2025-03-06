@@ -14,5 +14,12 @@ const portfolioData = {
         { name: "Git/GitHub", rating:5 }
     ],
 
-
+    interests:[
+        "Web Development",
+        "Open Source Projects",
+        "Football/Soccer",
+        "TV & Movie",
+        "Reading",
+        "Cyber Security"
+    ],
 }
