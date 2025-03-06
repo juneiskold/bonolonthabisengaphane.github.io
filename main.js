@@ -40,5 +40,24 @@ const commands = {
         return portfolioData.about;
     },
 
+    skills:function() {
+        markCommandAsUsed('skills');
+        let output = `<div class="skills-container">
+<h2>My Skills - Rated by Oscar Awards 🏆</h2>
+<div class="skills-list">`;
+      
+       portfolioData.skills.forEach(skill => {
+           const oscars = '🏆'.repeat(skill.rating);
+           output += `
+<div class="skill-item">
+   <div class="skill-name">${skill.name}</div>
+   <div class="skill-rating">${oscars}</div>
+</div>`;
+       });
+      
+       output += `</div></div>`;
+       return output;
+    },
+
     
 }
