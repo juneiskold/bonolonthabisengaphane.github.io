@@ -192,3 +192,8 @@ body.light-mode {
 .experience-container {
     margin-bottom: 20px;
 }
+
+.education-list, .certifications-list {
+    list-style-type: none;
+    padding-left: 0;
+}
