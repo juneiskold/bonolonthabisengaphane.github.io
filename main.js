@@ -281,4 +281,11 @@ function markCommandAsUsed(cmd) {
     addToHistory("help", commands.help());
  }, 3000);
  
+
+ function scrollToBottom() {
+    if (terminalContent) {
+        terminalContent.scrollTop = terminalContent.scrollHeight;
+    }
+ }
+ 
  
