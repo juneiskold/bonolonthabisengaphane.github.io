@@ -22,4 +22,24 @@ const portfolioData = {
         "Reading",
         "Cyber Security"
     ],
+
+    projects: [
+        {
+            name: "Portfolio Website",
+            technologies: ["HTML", "CSS", "JavaScript"],
+            link: "https://github.com/yourusername/portfolio"
+        },
+
+        {
+            name: "E-commerce App",
+            technologies: ["TypeScripte", "Next.js", "Stripe API"],
+            link: "https://github.com/yourusername/ecommerce"
+        },
+
+        {
+            name: "Chat Application",
+            technologies: ["Node.js", "Socket.io", "MongoDB"],
+            link: "https://github.com/yourusername/chat-app"
+        },
+    ]
 }
