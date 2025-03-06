@@ -217,3 +217,9 @@ a:hover {
 .light-mode a:hover {
     color: #008800;
 }
+
+.project-link::after, .contact-link::after,
+.education-link::after, .certification-link::after {
+    content: ' 🔗';
+    font-size: 0.8em;
+}
