@@ -303,3 +303,33 @@ function markCommandAsUsed(cmd) {
     }
  }
  
+ function addToHistory(input, output) {
+    if (output === '') return; 
+    
+   
+    const commandBlock = document.createElement('div');
+    commandBlock.className = 'command-block';
+   
+    const commandInput = document.createElement('div');
+    commandInput.className = 'command-input';
+   
+    
+    if (input === 'system') {
+        commandInput.innerHTML = `<span class="prompt">system:</span>`;
+    } else {
+        commandInput.innerHTML = `<span class="prompt">user@portfolio:~$</span> ${input}`;
+    }
+   
+    const commandOutput = document.createElement('div');
+    commandOutput.className = 'command-output';
+    commandOutput.innerHTML = output;
+   
+    commandBlock.appendChild(commandInput);
+    commandBlock.appendChild(commandOutput);
+   
+    commandHistory.appendChild(commandBlock);
+   
+    
+    scrollToBottom();
+ }
+ 
