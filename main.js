@@ -381,5 +381,8 @@ function markCommandAsUsed(cmd) {
     scrollToBottom();
  });
  
-
+ if (terminalContent) {
+    observer.observe(terminalContent, { childList: true, subtree: true });
+ }
+ 
  
