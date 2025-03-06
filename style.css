@@ -75,3 +75,7 @@ body.light-mode {
 .welcome-message {
     margin-bottom: 15px;
 }
+
+.command-history {
+    margin-bottom: 15px;
+}
