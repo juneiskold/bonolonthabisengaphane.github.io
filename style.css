@@ -285,3 +285,14 @@ a:hover {
 .dark-mode .unused-command-item:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+.reset-commands {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+    transition: all 0.2 ease;
+}
