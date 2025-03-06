@@ -40,6 +40,24 @@ const portfolioData = {
             name: "Chat Application",
             technologies: ["Node.js", "Socket.io", "MongoDB"],
             link: "https://github.com/yourusername/chat-app"
+        }
+    ],
+
+
+    blog:[
+
+        {
+            title: "Getting Started with React Hooks",
+            date: "2025-01-15",
+            snippet: "A beginner's guide to understanding and implementing React Hooks in your projects.",
+            link: "https://yourblog.com/react-hooks-guide"
+        },
+
+        {
+            title: "CSS Grid vs Flexbox",
+            date: "2024-12-10",
+            snippet: "Comparing two powerful CSS layout systems and when to use each one.",
+            link: "https://yourblog.com/css-grid-vs-flexbox"
         },
     ]
 }
