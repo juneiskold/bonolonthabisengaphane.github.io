@@ -101,3 +101,7 @@ body.light-mode {
 .command-block {
     margin-bottom: 10px;
 }
+
+.command-input {
+    margin-bottom: 10px;
+}
