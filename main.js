@@ -8,3 +8,7 @@ const themeToggle = document.getElementById("theme-toggle");
 const moonIcon = document.querySelector(".moon")
 const sunIcon = document.querySelector(".sun");
 const terminalContent = document.querySelector(".terminal-content");
+
+
+let index = 0;
+let darkMode = defaultDarkMode;
