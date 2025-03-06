@@ -197,3 +197,15 @@ function resetAllCommands() {
 
     addToHistory("system", "All commands have been reset. Type 'help' to see available commands.");
 }
+
+
+function createUnusedCommandsElement() {
+
+    if (!unusedCommandsElement) {
+        unusedCommandsElement = document.createElement('div');
+        unusedCommandsElement.className = 'unused-commands';
+        document.body.appendChild(unusedCommandsElement);
+    }
+
+    updateUnusedCommandsList();
+}
