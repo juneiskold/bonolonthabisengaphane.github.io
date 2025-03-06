@@ -117,6 +117,21 @@ const commands = {
         output += `</ul></div>`;
         return output;
     },
-   
+
+
+    contact: function() {
+        markCommandAsUsed('contact');
+        return `
+ <div class="contact-container">
+    <h2>Contact Information:</h2>
+    <ul class="contact-list">
+        <li><span class="contact-label">Email:</span> <a href="${portfolioData.contact.email}" class="contact-link">your.email@example.com</a></li>
+        <li><span class="contact-label">GitHub:</span> <a href="${portfolioData.contact.github}" target="_blank" class="contact-link">github.com/yourusername</a></li>
+        <li><span class="contact-label">LinkedIn:</span> <a href="${portfolioData.contact.linkedin}" target="_blank" class="contact-link">linkedin.com/in/yourusername</a></li>
+        <li><span class="contact-label">Twitter:</span> <a href="${portfolioData.contact.twitter}" target="_blank" class="contact-link">twitter.com/yourusername</a></li>
+    </ul>
+ </div>
+ `;
+    },
  
 }
