@@ -68,4 +68,29 @@ const commands = {
  `;
     },
  
+
+    projects: function() {
+        markCommandAsUsed('projects');
+        let output = `<div class="projects-container">`;
+       
+        portfolioData.projects.forEach((project, index) => {
+            output += `
+ <div class="project-card" style="animation-delay: ${index * 0.2}s">
+    <div class="project-header">
+        <span><a href="${project.link}" target="_blank" class="project-link">${project.name}</a></span>
+        <span>1 - 0</span>
+        <span>Me</span>
+    </div>
+    <div class="project-tech">
+        <span class="font-semibold">Goal Scorers: </span>
+        ${project.technologies.map(tech => `<span style="animation-delay: ${index * 0.1}s">⚽ ${tech}</span>`).join(' ')}
+    </div>
+ </div>
+ `;
+        });
+       
+        output += `</div>`;
+        return output;
+    },
+ 
 }
