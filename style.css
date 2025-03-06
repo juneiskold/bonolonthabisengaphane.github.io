@@ -142,3 +142,9 @@ body.light-mode {
 .skills-container {
     margin-bottom: 20px;
 }
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
