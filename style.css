@@ -148,3 +148,11 @@ body.light-mode {
     flex-direction: column;
     gap: 8px;
 }
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #0f0;
+    padding-bottom: 5px;
+}
