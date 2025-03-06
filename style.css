@@ -276,3 +276,8 @@ a:hover {
     text-align: center;
     font-family: 'Courier New', monospace;
 }
+
+.unused-command-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
