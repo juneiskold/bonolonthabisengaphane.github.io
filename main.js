@@ -59,5 +59,13 @@ const commands = {
        return output;
     },
 
-    
+
+    interests: function() {
+        markCommandAsUsed('interests');
+        return `
+ My Interests:
+ ${portfolioData.interests.map(interest => `• ${interest}`).join('\n')}
+ `;
+    },
+ 
 }
