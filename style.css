@@ -197,3 +197,7 @@ body.light-mode {
     list-style-type: none;
     padding-left: 0;
 }
+
+.education-list li, .certifications-list li {
+    margin-bottom: 8px;
+}
