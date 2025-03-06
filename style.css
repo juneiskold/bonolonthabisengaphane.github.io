@@ -182,3 +182,8 @@ body.light-mode {
 .contact-list li {
     margin-bottom: 8px;
 }
+
+.contact-label {
+    font-weight: bold;
+    margin-right: 8px;
+}
