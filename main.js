@@ -252,3 +252,12 @@ function updateUnusedCommandsList() {
 });
 
 }
+
+
+function markCommandAsUsed(cmd) {
+    usedCommands.add(cmd);
+    if (unusedCommandsElement) {
+        updateUnusedCommandsList();
+    }
+ }
+ 
