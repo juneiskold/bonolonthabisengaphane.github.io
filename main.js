@@ -209,3 +209,10 @@ function createUnusedCommandsElement() {
 
     updateUnusedCommandsList();
 }
+
+function updateUnusedCommandsList() {
+    const commandsList = Object.keys(commands);
+    const unusedCommandsList = commandsList.filter(cmd => !usedCommands.has(cmd));
+
+    
+}
