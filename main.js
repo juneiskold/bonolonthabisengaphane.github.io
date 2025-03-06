@@ -180,5 +180,12 @@ const commands = {
         commandHistory.innerHTML = '';
         return '';
     },
+
+
+    theme: function() {
+        markCommandAsUsed('theme');
+        toggleTheme();
+        return ''; // Return empty string instead of a message
+    }
  
-}
+};
