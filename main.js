@@ -194,4 +194,6 @@ const commands = {
 function resetAllCommands() {
     usedCommands.clear();
     updateUnusedCommandsList();
+
+    addToHistory("system", "All commands have been reset. Type 'help' to see available commands.");
 }
