@@ -68,4 +68,32 @@ const portfolioData = {
         linkedin: "https://linkedin.com/bonoloaphane",
         twitter: "https://twitter.com/juneiskold"
     },
-}
+
+    experience:{
+        education: [
+            {
+                degree: "National NQF Level 5 Certifcate in Systems Development",
+                institution: "WeThinkCode_",
+                year: "2023-2025",
+                link: "https://www.wethinkcode.com"
+            }
+        ],
+
+        certification: [
+            {
+                name: "Full Stack Web Development",
+                provider: "Udemy",
+                year: "2022",
+                link: "https://www.udemy.com/certificate/UC-123456789"
+            },
+
+            {
+                name: "AWS Cloud Practitioner",
+                provider: "Amazon Web Services",
+                year: "2023",
+                link: "https://aws.amazon.com/certification/certified-cloud-practitioner"
+            }
+ 
+        ]
+    }
+};
