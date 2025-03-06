@@ -73,7 +73,7 @@ const portfolioData = {
                 degree: "National NQF Level 5 Certifcate in Systems Development",
                 institution: "WeThinkCode_",
                 year: "2023-2025",
-                link: "https://www.wethinkcode.com"
+                link: "https://wethinkcode.co.za/"
             }
         ],
 
