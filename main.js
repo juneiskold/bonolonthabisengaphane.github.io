@@ -267,3 +267,18 @@ function markCommandAsUsed(cmd) {
     index = (index + 1) % glitchFrames.length;
  }, 300);
  
+
+ setTimeout(() => {
+    clearInterval(loadingInterval);
+    loadingText.style.display = 'none';
+    terminal.style.display = 'flex';
+    terminalInput.focus();
+   
+    
+    createUnusedCommandsElement();
+   
+
+    addToHistory("help", commands.help());
+ }, 3000);
+ 
+ 
