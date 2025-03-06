@@ -305,3 +305,7 @@ a:hover {
 .dark-mode .reset-commands {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.dark-mode .reset-commands:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
