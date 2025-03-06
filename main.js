@@ -392,4 +392,7 @@ function markCommandAsUsed(cmd) {
     }
  });
  
+ window.addEventListener('load', function() {
+    setTimeout(scrollToBottom, 3100); // Just after terminal appears
+ });
  
