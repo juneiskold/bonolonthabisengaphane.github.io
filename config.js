@@ -25,7 +25,7 @@ const portfolioData = {
         {
             name: "Portfolio Website",
             technologies: ["HTML", "CSS", "JavaScript"],
-            link: "https://github.com/yourusername/portfolio"
+            link: "https://github.com/juneiskold/bonolonthabisengaphane.github.io"
         },
 
         {
