@@ -29,9 +29,9 @@ const portfolioData = {
         },
 
         {
-            name: "E-commerce App",
-            technologies: ["TypeScript", "Next.js", "Stripe API"],
-            link: "https://github.com/yourusername/ecommerce"
+            name: "CLI Quiz",
+            technologies: ["Node.js", "JavaScript"],
+            link: "https://github.com/juneiskold/custom_cli-game"
         },
 
         {
