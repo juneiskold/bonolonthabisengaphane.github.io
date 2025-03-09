@@ -61,10 +61,12 @@ const portfolioData = {
 
 
     contact: {
+
         email: "https://bonoloapp28@gmail.com",
         github: "https://github.com/juneiskold",
         linkedin: "https://www.linkedin.com/in/bonolo-aphane-22a5b229a",
         twitter: "https://twitter.com/juneiskold"
+        
     },
 
     experience:{

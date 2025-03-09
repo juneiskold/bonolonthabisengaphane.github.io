@@ -120,10 +120,10 @@ ${portfolioData.interests.map(interest => `• ${interest}`).join('\n')}
 <div class="contact-container">
    <h2>Contact Information:</h2>
    <ul class="contact-list">
-       <li><span class="contact-label">Email:</span> <a href="${portfolioData.contact.email}" class="contact-link">your.email@example.com</a></li>
-       <li><span class="contact-label">GitHub:</span> <a href="${portfolioData.contact.github}" target="_blank" class="contact-link">github.com/yourusername</a></li>
-       <li><span class="contact-label">LinkedIn:</span> <a href="${portfolioData.contact.linkedin}" target="_blank" class="contact-link">linkedin.com/in/yourusername</a></li>
-       <li><span class="contact-label">Twitter:</span> <a href="${portfolioData.contact.twitter}" target="_blank" class="contact-link">twitter.com/yourusername</a></li>
+       <li><span class="contact-label">Email:</span> <a href="${portfolioData.contact.email}" class="contact-link">"https://bonoloapp28@gmail.com"</a></li>
+       <li><span class="contact-label">GitHub:</span> <a href="${portfolioData.contact.github}" target="_blank" class="contact-link">"https://github.com/juneiskold"</a></li>
+       <li><span class="contact-label">LinkedIn:</span> <a href="${portfolioData.contact.linkedin}" target="_blank" class="contact-link">"https://www.linkedin.com/in/bonolo-aphane-22a5b229a"</a></li>
+       <li><span class="contact-label">Twitter:</span> <a href="${portfolioData.contact.twitter}" target="_blank" class="contact-link">"https://twitter.com/juneiskold"</a></li>
    </ul>
 </div>
 `;
